@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortfolioGen - Создай крутое портфолио</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="particles-js"></div>
+
+    <header>
+        <nav>
+            <div class="logo">PortfolioGen</div>
+            <div class="nav-links">
+                <a href="#features">Возможности</a>
+                <a href="#examples">Примеры</a>
+                <a href="#creator" class="btn-nav">Создать</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="animate__animated animate__fadeInUp">Создай портфолио, <br>которое <span class="typewriter"></span></h1>
+            <p class="animate__animated animate__fadeInUp animate__delay-1s">Профессиональный конструктор с потрясающими анимациями</p>
+            <a href="#creator" class="btn btn-primary animate__animated animate__fadeInUp animate__delay-2s">Начать создание <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="hero-image animate__animated animate__fadeIn animate__delay-1s">
+            <img src="https://assets.website-files.com/5f7a91e47a0c00d5b0f2d482/5f7b9a2b05e29b5a5d9e6f1e_portfolio%20examples.png" alt="Пример портфолио">
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2>Зачем нужно портфолио?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-briefcase"></i>
+                <h3>Покажите свои работы</h3>
+                <p>Демонстрируйте проекты в лучшем свете</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Увеличьте доход</h3>
+                <p>Привлекайте больше клиентов</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-gem"></i>
+                <h3>Выделитесь</h3>
+                <p>Создайте уникальное впечатление</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Примеры дизайнов -->
+    <section id="examples" class="examples">
+        <h2>Наши лучшие дизайны</h2>
+        <div class="designs-grid">
+            <div class="design-card" data-theme="minimal">
+                <div class="design-preview"></div>
+                <h3>Минимализм</h3>
+            </div>
+            <div class="design-card" data-theme="creative">
+                <div class="design-preview"></div>
+                <h3>Креативный</h3>
+            </div>
+            <div class="design-card" data-theme="tech">
+                <div class="design-preview"></div>
+                <h3>Технологичный</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Конструктор -->
+    <section id="creator" class="creator">
+        <h2>Создайте свое портфолио</h2>
+        <p>Ответьте на несколько вопросов, и мы сгенерируем идеальное портфолио</p>
+        
+        <form id="portfolio-form" class="portfolio-form">
+            <div class="form-step active" data-step="1">
+                <h3>Основная информация</h3>
+                <div class="form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" required placeholder="Иван Иванов">
+                </div>
+                <div class="form-group">
+                    <label for="job">Ваша профессия</label>
+                    <input type="text" id="job" required placeholder="Веб-дизайнер">
+                </div>
+                <div class="form-group">
+                    <label for="about">Кратко о себе</label>
+                    <textarea id="about" required placeholder="Расскажите о своих навыках и опыте..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-next">Далее <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            
+            <div class="form-step" data-step="2">
+                <h3>Ваши проекты</h3>
+                <div class="form-group">
+                    <label for="projects">Названия проектов (через запятую)</label>
+                    <input type="text" id="projects" required placeholder="Корпоративный сайт, Лендинг, Мобильное приложение">
+                </div>
+                <div class="form-group">
+                    <label for="skills">Ваши навыки (через запятую)</label>
+                    <input type="text" id="skills" required placeholder="Figma, HTML/CSS, JavaScript, UI/UX">
+                </div>
+                <div class="form-group">
+                    <label for="certificates">Сертификаты (через запятую)</label>
+                    <input type="text" id="certificates" placeholder="Coursera, Яндекс.Практикум">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-prev"><i class="fas fa-arrow-left"></i> Назад</button>
+                    <button type="button" class="btn btn-next">Далее <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            
+            <div class="form-step" data-step="3">
+                <h3>Контактные данные</h3>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="example@mail.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" placeholder="+7 (999) 123-45-67">
+                </div>
+                <div class="form-group">
+                    <label for="social">Соцсети (ссылки через запятую)</label>
+                    <input type="text" id="social" placeholder="https://t.me/username, https://github.com/username">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-prev"><i class="fas fa-arrow-left"></i> Назад</button>
+                    <button type="button" class="btn btn-next">Далее <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            
+            <div class="form-step" data-step="4">
+                <h3>Выберите стиль</h3>
+                <div class="theme-selector">
+                    <div class="theme-option active" data-theme="minimal">
+                        <div class="theme-preview minimal-theme"></div>
+                        <span>Минимализм</span>
+                    </div>
+                    <div class="theme-option" data-theme="creative">
+                        <div class="theme-preview creative-theme"></div>
+                        <span>Креативный</span>
+                    </div>
+                    <div class="theme-option" data-theme="tech">
+                        <div class="theme-preview tech-theme"></div>
+                        <span>Технологичный</span>
+                    </div>
+                </div>
+                <input type="hidden" id="theme" value="minimal">
+                <div class="form-actions">
+                    <button type="button" class="btn btn-prev"><i class="fas fa-arrow-left"></i> Назад</button>
+                    <button type="submit" class="btn btn-generate">Сгенерировать портфолио <i class="fas fa-magic"></i></button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
